@@ -55,6 +55,7 @@
      <Compile Include="Assets\Let&apos;s Try Shooter\Scripts\CompletedScripts\RayViewerComplete.cs" />
      <Compile Include="Assets\Let&apos;s Try Shooter\Scripts\CompletedScripts\ShootableBox.cs" />
      <Compile Include="Assets\Let&apos;s Try Shooter\Scripts\RaycastShoot.cs" />
+     <Compile Include="Assets\Let&apos;s Try Shooter\Scripts\RayViewer.cs" />
      <Compile Include="Assets\Shared Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Shared Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Shared Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

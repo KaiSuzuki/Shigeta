@@ -29,6 +29,32 @@ public class RaycastShoot : MonoBehaviour {
         {
             nextFire = Time.time + fireRate;
 
+            StartCoroutine(ShotEffect());
+
+            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+
+            laserline.SetPosition(0, gunEnd.position);
+
+            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weponRange))
+            {
+                laserline.SetPosition(1, hit.point);
+            }
+            else
+            {
+                laserline.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weponRange));
+            }
+
+
         }
 	}
+
+    private IEnumerator ShotEffect()
+    {
+        gunAudio.Play();
+
+        laserline.enabled = true;
+        yield return shotDuration;
+        laserline.enabled = false;
+    }
 }
